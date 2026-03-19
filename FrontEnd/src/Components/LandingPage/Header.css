@@ -1,0 +1,409 @@
+/* Hamburger Menu Toggle Button */
+.hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px 10px;
+    margin-right: 8px;
+    border-radius: 8px;
+    transition: background-color 200ms ease, transform 150ms ease;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide hamburger button on desktop (md and up) */
+@media (min-width: 768px) {
+    .hamburger-btn {
+        display: none !important;
+    }
+}
+
+.hamburger-btn:hover {
+    background-color: rgba(45, 212, 212, 0.1);
+}
+
+.hamburger-btn:active {
+    transform: scale(0.95);
+}
+
+.hamburger-line {
+    width: 24px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform-origin: center;
+}
+
+.hamburger-btn:hover .hamburger-line {
+    background-color: #2dd4d4;
+}
+
+/* Animated hamburger to X when open */
+.hamburger-btn .hamburger-line.open:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+    background-color: #2dd4d4;
+}
+
+.hamburger-btn .hamburger-line.open:nth-child(2) {
+    opacity: 0;
+    background-color: #2dd4d4;
+}
+
+.hamburger-btn .hamburger-line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+    background-color: #2dd4d4;
+}
+
+/* Profile Dropdown */
+.profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background: rgba(6, 182, 212, 0.1);
+    transition: background 200ms ease;
+}
+
+.profile-btn:hover {
+    background: rgba(6, 182, 212, 0.2);
+}
+
+.profile-dropdown {
+    min-width: 280px;
+    padding: 0 !important;
+}
+
+.dropdown-user-info {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-name {
+    margin: 0;
+    font-weight: 600;
+    color: #ecfeff;
+    font-size: 0.9375rem;
+}
+
+.user-email {
+    margin: 4px 0 0 0;
+    color: #94a3b8;
+    font-size: 0.8125rem;
+}
+
+.user-role {
+    margin: 6px 0 0 0;
+    font-size: 0.75rem;
+    color: #06b6d4;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.dropdown-divider {
+    margin: 6px 0;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-link {
+    color: #ff6b6b !important;
+}
+
+.logout-link:hover {
+    background: rgba(255, 107, 107, 0.1) !important;
+    color: #ff8888 !important;
+}
+
+/* Mobile User Section */
+.mobile-user-section {
+    padding: 1rem;
+    background: rgba(6, 182, 212, 0.1);
+    border-radius: 6px;
+    margin: 0.5rem 0;
+}
+
+.mobile-user-name {
+    color: #ecfeff;
+    font-weight: 600;
+    margin: 0;
+    font-size: 0.9375rem;
+}
+
+.mobile-user-email {
+    color: #94a3b8;
+    font-size: 0.8125rem;
+    margin: 0.25rem 0 0 0;
+}
+
+.logout-mobile {
+    color: #ff6b6b !important;
+}
+
+.logout-mobile:hover {
+    background: rgba(255, 107, 107, 0.1) !important;
+    color: #ff8888 !important;
+}
+
+/* Mobile button styles for touch feedback */
+.mobile-btn {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+
+.mobile-btn:active {
+    color: #2dd4d4 !important;
+    transform: scale(1.1);
+}
+
+/* Nav link common styles */
+.nav-link {
+    color: white;
+    font-size: 0.875rem;
+    transition: color 200ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #2dd4d4;
+}
+
+.nav-link:active {
+    color: #06b6d4;
+}
+
+.mobile-menu {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-nav-btn {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    display: block;
+}
+
+.mobile-nav-btn:active {
+    color: #2dd4d4 !important;
+    transform: scale(1.08) !important;
+}
+
+/* Alternative: Use touch event styles */
+@supports (pointer: coarse) {
+    .mobile-btn:focus-visible {
+        color: #2dd4d4;
+        transform: scale(1.1);
+    }
+    
+    .mobile-nav-btn:focus-visible {
+        color: #2dd4d4;
+        transform: scale(1.08);
+    }
+
+    .cta-btn:focus-visible {
+        background-color: #0d9488;
+        transform: scale(1.05);
+    }
+}
+
+/* For devices that support touch but also hover */
+@media (hover: hover) {
+    .mobile-btn:hover {
+        color: #2dd4d4;
+    }
+
+    .mobile-nav-btn:hover {
+        color: #2dd4d4;
+        transform: scale(1.05);
+    }
+
+    .cta-btn:hover {
+        background-color: #0d9488;
+        transform: scale(1.05);
+    }
+}
+
+/* Dropdown menu for desktop Tutorials nav item */
+.nav-item {
+    position: relative;
+}
+
+.nav-item .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #070707; /* near-black to match navbar */
+    color: #ffffff;
+    min-width: 240px;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(2,6,23,0.6);
+    padding: 6px 6px;
+    z-index: 60;
+    border: 1px solid rgba(255,255,255,0.04);
+    overflow: hidden;
+}
+
+/* accent bar at top of dropdown to echo site accent */
+.nav-item .dropdown::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #06b6d4, #10b981);
+}
+
+.nav-item:hover .dropdown,
+.nav-item:focus-within .dropdown {
+    display: block;
+    animation: fadeSlide 180ms ease-out;
+}
+
+.dropdown-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 140ms ease, transform 120ms ease, color 120ms ease;
+}
+
+.dropdown-link:hover,
+.dropdown-link:focus {
+    background: rgba(6,182,212,0.06); /* subtle teal highlight */
+    transform: translateX(6px);
+    color: #ecfeff;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile submenu inside the mobile full-screen menu */
+.mobile-submenu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Mobile-specific submenu styling to match dark navbar */
+@media (max-width: 768px) {
+    .mobile-menu {
+        background: #070707; /* same as navbar */
+        color: #ffffff;
+    }
+
+    .mobile-submenu {
+        padding-left: 6px;
+        margin-top: 6px;
+    }
+
+    .mobile-submenu .mobile-nav-btn {
+        padding-left: 18px;
+        background: rgba(255,255,255,0.02);
+        border-radius: 6px;
+        width: calc(100% - 12px);
+        color: #ffffff;
+        transition: background 120ms ease, transform 80ms ease;
+    }
+
+    .mobile-submenu .mobile-nav-btn:hover,
+    .mobile-submenu .mobile-nav-btn:focus {
+        background: rgba(6,182,212,0.06);
+        color: #ecfeff;
+        transform: none;
+    }
+
+    /* ensure desktop absolute dropdown doesn't appear on small screens */
+    .nav-item .dropdown {
+        display: none !important;
+    }
+}
+
+/* For touch devices only */
+@media (hover: none) and (pointer: coarse) {
+    .mobile-btn {
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 6px;
+        padding: 6px 10px;
+        margin: -6px -10px;
+    }
+
+    .mobile-btn:active {
+        background-color: rgba(45, 212, 212, 0.1);
+    }
+
+    .mobile-nav-btn {
+        background-color: transparent;
+        border-radius: 8px;
+    }
+
+    .mobile-nav-btn:active {
+        background-color: rgba(45, 212, 212, 0.1);
+    }
+
+    .cta-btn:active {
+        background-color: #0d9488;
+    }
+}
+
+/* Mobile View Responsive - Only affects mobile, desktop stays same */
+@media (max-width: 768px) {
+    /* Navbar responsive adjustments */
+    nav {
+        margin: 1rem 0.5rem !important;
+        padding: 0.5rem !important;
+    }
+
+    nav p {
+        display: none;
+    }
+
+    nav .hidden {
+        display: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile menu optimization */
+    .mobile-menu {
+        padding: 0.5rem !important;
+        gap: 0.5rem !important;
+    }
+
+    .mobile-nav-btn {
+        padding: 0.75rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    .mobile-btn {
+        font-size: 1.5rem !important;
+    }
+}
