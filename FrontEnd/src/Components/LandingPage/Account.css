@@ -1,0 +1,521 @@
+.account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url('/src/Imgs/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.account-card {
+    background: black;
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Logo Section */
+.logo-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.logo-img{
+    height: 80px;
+    width: 80px;
+}
+
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-field {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.input-field::placeholder {
+    color: #999;
+}
+
+/* Password Toggle */
+.password-group {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 8px;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: #333;
+}
+
+/* Success Section */
+.success-section {
+    background: #f0f8f0;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.success-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkmark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #22c55e;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.success-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #166534;
+}
+
+.cloudflare-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.cloudflare-text {
+    font-size: 11px;
+    font-weight: 700;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+
+.badge-links {
+    font-size: 11px;
+}
+
+.badge-links a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    margin: 0 3px;
+}
+
+.badge-links a:hover {
+    color: #333;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #5d0948;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.submit-btn:hover {
+    background: #3e031d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Auth Toggle */
+.auth-toggle {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.toggle-text {
+    color: #999;
+    font-size: 14px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    padding: 0 4px;
+}
+
+.toggle-btn:hover {
+    color: #4a90e2;
+    text-decoration: underline;
+}
+
+/* Social Section */
+.social-section {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.social-text {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background:white;
+    color: #9c1d1d;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: #a22c2c;
+    transform: translateY(-3px);
+}
+
+.social-icon.google:hover {
+    background: #f4b942;
+    color: white;
+}
+
+.social-icon.github:hover {
+    background: #f4b942;
+    color: white;
+}
+
+.social-icon.facebook:hover {
+    background: #f4b942;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .account-card {
+        padding: 25px 20px;
+    }
+
+    .logo::before {
+        font-size: 48px;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .input-field {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile View Responsive - Only affects mobile */
+@media (max-width: 768px) {
+    .account-container {
+        padding: 15px;
+        align-items: flex-start;
+        padding-top: 60px;
+    }
+
+    .account-card {
+        padding: 25px 30px;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .logo-section {
+        margin-bottom: 20px;
+    }
+
+    .logo-img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .logo-text {
+        font-size: 20px;
+        margin-top: 8px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .input-field {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .auth-toggle {
+        margin-bottom: 12px;
+    }
+
+    .toggle-text,
+    .toggle-btn {
+        font-size: 13px;
+    }
+
+    .social-section {
+        margin-top: 12px;
+        padding-top: 12px;
+    }
+
+    .social-text {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        gap: 12px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .success-section {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .checkmark {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .success-text {
+        font-size: 14px;
+    }
+
+    .cloudflare-badge {
+        align-items: flex-end;
+    }
+
+    .cloudflare-text {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .account-container {
+        padding: 12px;
+        padding-top: 50px;
+        min-height: auto;
+    }
+
+    .account-card {
+        padding: 20px 18px;
+        border-radius: 8px;
+        max-width: 100%;
+    }
+
+    .logo-section {
+        margin-bottom: 16px;
+    }
+
+    .logo-img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+        margin-top: 6px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .input-field {
+        padding: 10px 12px;
+        font-size: 13px;
+        border-radius: 4px;
+    }
+
+    .password-toggle {
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    .submit-btn {
+        padding: 10px;
+        font-size: 13px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+
+    .auth-toggle {
+        margin-bottom: 10px;
+    }
+
+    .toggle-text,
+    .toggle-btn {
+        font-size: 12px;
+    }
+
+    .toggle-btn {
+        padding: 0 2px;
+    }
+
+    .success-section {
+        background: #f0f8f0;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .success-message {
+        gap: 8px;
+    }
+
+    .checkmark {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+
+    .success-text {
+        font-size: 13px;
+    }
+
+    .cloudflare-badge {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .cloudflare-text {
+        font-size: 9px;
+    }
+
+    .badge-links {
+        font-size: 9px;
+    }
+
+    .badge-links a {
+        margin: 0 1px;
+    }
+
+    .social-section {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+    }
+
+    .social-text {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,311 @@
+.footer-container {
+    background: #f8f9fa;
+    border-top: 1px solid #e5e5e5;
+    padding: 60px 24px;
+    margin-top: 40px;
+}
+
+/* Main Footer Content */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Mission Section */
+.footer-mission {
+    margin-bottom: 60px;
+}
+
+.mission-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto 16px auto;
+    display: block;
+}
+
+.mission-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #dc3545;
+    margin: 12px 0;
+}
+
+.mission-text {
+    font-size: 17px;
+    color: #6e3435;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 16px auto 0;
+}
+
+/* Companies Section */
+.companies-section {
+    margin: 60px 0;
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px 20px;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.company-logo {
+    font-size: 15px;
+    color: black;
+    font-weight: 500;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.company-logo:hover {
+    color: #666;
+}
+
+/* Careers Section */
+.footer-careers {
+    margin: 60px 0;
+    padding: 40px 24px;
+    background: white;
+    border-radius: 8px;
+}
+
+.careers-text {
+    font-size: 15px;
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.careers-btn {
+    background: none;
+    border: none;
+    color: #0d9488;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+}
+
+.careers-btn:hover {
+    color: #0f766e;
+    transform: translateX(2px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 50px;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 200px;
+}
+
+.copyright {
+    font-size: 13px;
+    color: #999;
+    margin: 0;
+}
+
+.footer-right {
+    flex: 1;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.footer-right a {
+    font-size: 13px;
+    color: #999;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-right a:hover {
+    color: #0d9488;
+}
+
+.divider {
+    color: #ddd;
+    margin: 0 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 40px 16px;
+    }
+
+    .mission-logo {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 12px auto;
+        display: block;
+    }
+
+    .mission-title {
+        font-size: 20px;
+    }
+
+    .mission-text {
+        font-size: 14px;
+        padding: 0 12px;
+    }
+
+    .companies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 20px 16px;
+        margin-bottom: 30px;
+    }
+
+    .company-logo {
+        font-size: 12px;
+        height: 35px;
+    }
+
+    .footer-careers {
+        margin: 40px 0;
+        padding: 30px 16px;
+    }
+
+    .careers-text {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .careers-btn {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 16px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex: 1;
+        min-width: auto;
+        text-align: center;
+    }
+
+    .footer-right {
+        min-width: auto;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+
+    .footer-right a {
+        font-size: 12px;
+    }
+
+    .divider {
+        margin: 0 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 30px 12px;
+        margin-top: 20px;
+    }
+
+    .footer-content {
+        max-width: 100%;
+    }
+
+    .mission-logo {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 12px auto;
+        display: block;
+    }
+
+    .mission-title {
+        font-size: 18px;
+    }
+
+    .mission-text {
+        font-size: 13px;
+        padding: 0 8px;
+        line-height: 1.5;
+    }
+
+    .companies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 12px;
+        margin-bottom: 20px;
+    }
+
+    .company-logo {
+        font-size: 11px;
+        height: 30px;
+    }
+
+    .footer-careers {
+        margin: 30px 0;
+        padding: 20px 12px;
+    }
+
+    .careers-text {
+        font-size: 13px;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+
+    .careers-btn {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        padding-top: 20px;
+        gap: 12px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+
+    .footer-right {
+        gap: 2px;
+    }
+
+    .footer-right a {
+        font-size: 11px;
+    }
+
+    .divider {
+        display: none;
+    }
+}
